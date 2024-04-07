@@ -7,7 +7,7 @@ function Slider() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch(`http://localhost:5000/features`);
+        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/features`);
         response = await response.json();
         setFeatures(response);
       } catch (error) {
